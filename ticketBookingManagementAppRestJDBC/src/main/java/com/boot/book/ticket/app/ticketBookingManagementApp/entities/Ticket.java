@@ -1,12 +1,13 @@
 package com.boot.book.ticket.app.ticketBookingManagementApp.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 //import java.sql.Date;
 
 @Entity
-@Table(name = "ticket")
-public class Ticket {
+@Table(name = "TICKET")
+public class Ticket implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ticketId")
