@@ -1,1 +1,1 @@
-insert into RITURAJ.TICKET(TICKET_ID,PASSENGER_NAME,BOOKING_DATE,SOURCE_STATION,DEST_STATION,EMAIL) values(1,'rituraj','04-APR-18','delhi','mughalsarai','anything');
+/*insert into RITURAJ.TICKET(TICKET_ID,PASSENGER_NAME,BOOKING_DATE,SOURCE_STATION,DEST_STATION,EMAIL) values(1,'rituraj','04-APR-18','delhi','mughalsarai','anything');*/

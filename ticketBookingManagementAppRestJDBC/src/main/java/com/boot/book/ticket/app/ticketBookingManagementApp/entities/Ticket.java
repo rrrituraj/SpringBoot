@@ -1,13 +1,18 @@
 package com.boot.book.ticket.app.ticketBookingManagementApp.entities;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 //import java.sql.Date;
 
 @Entity
 @Table(name = "TICKET")
-public class Ticket implements Serializable {
+@DynamicUpdate
+@NamedQueries(value = {
+	@NamedQuery(name = "Ticket.getTicketInfoBySourceStation", query = "select t from Ticket t where t.sourceStation=?1")
+})
+public class Ticket {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ticketId")

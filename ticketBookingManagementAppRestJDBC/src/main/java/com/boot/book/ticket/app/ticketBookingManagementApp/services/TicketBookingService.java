@@ -5,6 +5,8 @@ import com.boot.book.ticket.app.ticketBookingManagementApp.entities.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TicketBookingService {
 	@Autowired
@@ -32,4 +34,11 @@ public class TicketBookingService {
 		return ticketBookingDao.save(ticketFromDb);
 	}
 
+	public List<Ticket> findTicketByDestStation(String destStation) {
+		return ticketBookingDao.findTicketByDestStation(destStation);
+	}
+
+	public List<Ticket> getAllBySourceStation(String srcStation) {
+		return ticketBookingDao.getTicketInfoBySourceStation(srcStation);
+	}
 }

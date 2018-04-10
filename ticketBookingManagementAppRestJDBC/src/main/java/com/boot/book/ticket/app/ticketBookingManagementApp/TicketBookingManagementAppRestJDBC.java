@@ -1,26 +1,28 @@
 package com.boot.book.ticket.app.ticketBookingManagementApp;
 
+import com.boot.book.ticket.app.ticketBookingManagementApp.entities.Ticket;
+import com.boot.book.ticket.app.ticketBookingManagementApp.services.TicketBookingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+
+import java.util.Date;
 
 @SpringBootApplication
-@EnableConfigurationProperties
-//@EntityScan(basePackageClasses = {com.boot.book.ticket.app.ticketBookingManagementApp})
-public class TicketBookingManagementAppRestJDBC {
+public class TicketBookingManagementAppRestJDBC implements CommandLineRunner {
 
-	/*@Autowired
+	@Autowired
 	TicketBookingService ticketBookingService;
-*/
+
 	public static void main(String[] args) {
 		SpringApplication.run(TicketBookingManagementAppRestJDBC.class, args);
 	}
 
-	/*@Override
+	@Override
 	public void run(String... args) throws Exception {
-		Ticket ticket = new Ticket("Rituraj", new Date(), "New Delhi", "MughalSarai", "r.g7@kuchbhi.com");
+		Ticket ticket = new Ticket("Yashraj", new Date(), "New Delhi", "jaipur", "r.g7@kuchbhi.com");
 		ticketBookingService.createTicket(ticket);
 
-	}*/
+	}
 }
